@@ -1,4 +1,4 @@
-### vim-bujo
+# vim-bujo
 
 This plugin allows people to easily access and manage a minimalist todo list from vim.
 
