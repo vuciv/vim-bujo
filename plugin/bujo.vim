@@ -1,12 +1,12 @@
 if empty(glob('~/bujo'))
-  call mkdir($HOME . '/bujo', 'p')
+  call mkdir('~/bujo', 'p')
   exe "!mv ./../templates/todo.md ~/bujo/"
 endif
 
 " Open the bujo todo list file
 function s:OpenTodo()
   "30 makes it open at width 30
-  exe ":30vs " + $HOME + "/bujo/todo.md" 
+  exe ":30vs ~/bujo/todo.md" 
 endfunction
 
 if !exists(":Todo")
