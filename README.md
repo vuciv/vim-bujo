@@ -32,6 +32,9 @@ This gif shows how the TODO list opens up in vim.
 
 We can also see that the task list is very easy to manage.
 
+The ascii art is inserted manually, but you can do that yourself with the file 'templates/md.skeleton'
+
+
 ## Notes
 
 Feedback and bug reports are welcomed and encouraged.
