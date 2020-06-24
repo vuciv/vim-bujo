@@ -19,9 +19,9 @@ Plug 'jfonseca8/vim-bujo'
 * Conveniently open your todo list in vim
   - Run :Todo
 * Easily insert a new task
-  - Press <Ctrl-Enter>
+  - Press Ctrl-Enter
 * Easily check off a task
-  - Press <Ctrl-Backspace>
+  - Press Ctrl-Backspace
 
 
 ## Screenshots
