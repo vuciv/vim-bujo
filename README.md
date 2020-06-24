@@ -28,6 +28,8 @@ Plug 'jfonseca8/vim-bujo'
 
 This gif shows how the TODO list opens up in vim.
 
+![Gif of Bujo use](https://raw.githubusercontent.com/jfonseca8/vim-bujo/master/screenshots/bujo.gif)
+
 We can also see that the task list is very easy to manage.
 
 ## Notes
