@@ -1,7 +1,6 @@
 "Make bujo directory if it doesn't exist"
 if empty(glob('~/bujo'))
   call mkdir($HOME . '/bujo', 'p')
-
 endif
 
 " Open the bujo todo list file
