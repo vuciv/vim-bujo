@@ -1,6 +1,6 @@
 if empty(glob('~/bujo'))
-  !mkdir ~/bujo/
-  !mv ../templates/todo.md ~/bujo/
+  mkdir('~/bujo')
+  !mv ./../templates/todo.md ~/bujo/
 endif
 
 " Open the bujo todo list file
