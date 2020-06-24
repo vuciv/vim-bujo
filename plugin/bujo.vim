@@ -1,5 +1,5 @@
 if empty(glob('~/bujo'))
-  mkdir('~/bujo')
+  call mkdir('~/bujo')
   !mv ./../templates/todo.md ~/bujo/
 endif
 
