@@ -5,7 +5,7 @@ endif
 
 autocmd bufnewfile todo.md call append(0, 'Date: ')
 autocmd bufnewfile todo.md exe "g/Date: */s/Date: /" .strftime("%a d %b %Y")
-autocmd Bufwritepre,filewritepre todo.md execute "normal ma"
+autocmd Bufwritepre,filewritepre todo.md execute "normal G"
 
 
 
