@@ -1,0 +1,55 @@
+*bujo.txt*                                *bujo.txt*
+                        Bujo~
+             Bullet Journal Vim Plugin~
+
+Author: Jersey Fonseca <jerseyfonseca@gmail.com>
+
+Version: 0.1
+
+1. Overview
+2. Features
+3. FAQ
+
+=======================================================
+                                        *bujo-overview*
+1. Overview~
+
+This plugin allows people to easily access and
+manage a todo list.
+
+You can stable versions of this plugin at: 
+
+https://github.com/jfonseca8/vim-bujo
+
+Feedback and bug reports are welcomed and encouraged.
+If you want new features, please do let me know. I
+would be honored at the opportunity to make a tool
+better.
+
+I built this because I wanted the ease of vim bindings
+with the benefits of keeping a todo list on hand. It is
+very simple and minimialist.
+
+=======================================================
+                                        *bujo-features*
+2. Features~
+  
+  * Conveniently open your todo list in vim
+    - Run :Todo
+  * Easily insert a new task
+    - Press <Ctrl-Enter>
+  * Easily check off a task
+    - Press <Ctrl-Backspace>
+
+=======================================================
+                                           *bujo-notes*
+3. Notes
+
+I am not sure that writing this todo file into the root
+directory is the best way to go about it. I have never
+made anything like this, and couldn't find resources
+that were helpful with how to handle such situations.
+
+If this annoys anyone, please do let me know. I am
+happy to change it, and happy to know if there are
+better standardized ways to go about this
