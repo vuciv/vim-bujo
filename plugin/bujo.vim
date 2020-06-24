@@ -2,8 +2,8 @@
 if empty(glob('~/bujo'))
   call mkdir($HOME . '/bujo', 'p')
 endif
-
-autocmd bufnewfile todo.md call append(0, 'Date: ')
+autocmd bufnewfile todo.md call append(0, '  __________  ____  ____\n /_  __/ __ \/ __ \/ __ \\n')
+autocmd bufnewfile todo.md call append(1, 'Date: ')
 autocmd bufnewfile,bufreadpre todo.md exe "g/Date: */s/Date: /Date: " .strftime("%a %d %b %Y")
 autocmd bufnewfile,Bufwritepre,filewritepre todo.md execute "normal G"
 
