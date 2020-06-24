@@ -14,14 +14,28 @@ Plug 'jfonseca8/vim-bujo'
 ```
 
 
-## Use
 
-* Conveniently open your todo list in vim
-  - Run :Todo
-* Easily insert a new task
-  - Press Ctrl-Enter
-* Easily check off a task
-  - Press Ctrl-Backspace
+## Use / Mappings
+
+* Run:
+  ```
+  :Todo
+  ```
+* Insert a new task:
+  ```
+  nmap <C-Enter> <Plug>bujo#AddTodoNormal
+  imap <C-Enter> <Plug>bujo#AddTodoInsert
+  ```
+* Check off a task:
+  ```
+  nmap <C-BS> <Plug>bujo#CheckTodoNormal
+  imap <C-BS> <Plug>bujo#CheckTodoInsert
+  ```
+* Change cache directory:
+  ```
+  let g:bujo#todo_file_path = $HOME . "/.cache/bujo"
+  ```
+
 
 
 ## Screenshots
