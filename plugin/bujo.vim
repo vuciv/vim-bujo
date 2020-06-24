@@ -1,5 +1,5 @@
 if empty(glob('~/bujo'))
-  call mkdir('~/bujo', 'p')
+  call mkdir($HOME . '/bujo', 'p')
   exe "!mv ./../templates/todo.md ~/bujo/"
 endif
 
