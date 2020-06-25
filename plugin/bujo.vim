@@ -5,7 +5,7 @@ if empty(glob(g:bujo#todo_file_path))
 endif
 autocmd bufnewfile todo.md call append(0, '#Todo') 
 autocmd bufnewfile todo.md call append(1, 'Date: ')
-autocmd bufnewfile,bufreadpre,filewritepre todo.md exe "g/Date: */s/Date: /Date: " .strftime("%a %d %b %Y")
+autocmd bufnewfile,bufreadpre,filewritepre todo.md exe "g/Date: */s/Date: *.*/Date: " .strftime("%a %d %b %Y")
 autocmd bufnewfile,Bufwritepre,filewritepre todo.md execute "normal Go"
 
 
