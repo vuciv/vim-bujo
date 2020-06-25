@@ -32,7 +32,7 @@ Plug 'vuciv/vim-bujo'
   imap <C-BS> <Plug>BujoCheckinsert
   ```
   
-  **NOTE: These are my default keys. Some terminals do not register these keys the same. If this does not work, you will need to choose your own mappings. If anyone has suggestions for a new default mapping, please let me know!**
+  **NOTE: These are my default keys. Some terminals do not register these keys the same. For example, reddit user u/CoolioDude noted "for example, my terminal emulator sees enter, control-enter, and shift-enter as the same key." If this does not work, you will need to choose your own mappings. If anyone has suggestions for a new default mapping, please let me know!**
   
   
 * Change cache directory:
