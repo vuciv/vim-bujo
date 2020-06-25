@@ -23,13 +23,13 @@ Plug 'jfonseca8/vim-bujo'
   ```
 * Insert a new task:
   ```
-  nmap <C-Enter> <Plug>bujo#AddTodoNormal
-  imap <C-Enter> <Plug>bujo#AddTodoInsert
+  nmap <C-Enter> <Plug>BujoAddnormal
+  imap <C-Enter> <Plug>BujoAddinsert
   ```
 * Check off a task:
   ```
-  nmap <C-BS> <Plug>bujo#CheckTodoNormal
-  imap <C-BS> <Plug>bujo#CheckTodoInsert
+  nmap <C-BS> <Plug>BujoChecknormal
+  imap <C-BS> <Plug>BujoCheckinsert
   ```
 * Change cache directory:
   ```

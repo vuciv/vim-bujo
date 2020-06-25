@@ -37,11 +37,11 @@ very simple and minimialist.
   * Run:
     :Todo
   * Insert a new task:
-    nmap <C-Enter> <Plug>bujo#AddTodoNormal
-    imap <C-Enter> <Plug>bujo#AddTodoInsert
+    nmap <C-Enter> <Plug>BujoAddTodoNormal
+    imap <C-Enter> <Plug>BujoAddTodoInsert
   * Check off a task:
-    nmap <C-BS> <Plug>bujo#CheckTodoNormal
-    imap <C-BS> <Plug>bujo#CheckTodoInsert
+    nmap <C-BS> <Plug>BujoChecknormal
+    imap <C-BS> <Plug>BujoCheckinsert
   * Change cache directory:
     let g:bujo#todo_file_path = $HOME . "/.cache/bujo"
 
