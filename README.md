@@ -10,7 +10,7 @@ If you use a plugin manager, such as [vim-plug], follow its instructions on how 
 To install the stable version of the plugin, if using [vim-plug], put this in your `vimrc`/`init.vim`:
 
 ```
-Plug 'jfonseca8/vim-bujo'
+Plug 'vuciv/vim-bujo'
 ```
 
 
