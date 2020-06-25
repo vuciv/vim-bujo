@@ -10,7 +10,7 @@ If you use a plugin manager, such as [vim-plug], follow its instructions on how 
 To install the stable version of the plugin, if using [vim-plug], put this in your `vimrc`/`init.vim`:
 
 ```
-Plug 'jfonseca8/vim-bujo'
+Plug 'vuciv/vim-bujo'
 ```
 
 
@@ -31,6 +31,10 @@ Plug 'jfonseca8/vim-bujo'
   nmap <C-BS> <Plug>BujoChecknormal
   imap <C-BS> <Plug>BujoCheckinsert
   ```
+  
+  **NOTE: These are my default keys. Some terminals do not register these keys the same. For example, reddit user u/CoolioDude noted "for example, my terminal emulator sees enter, control-enter, and shift-enter as the same key." If this does not work, you will need to choose your own mappings. If anyone has suggestions for a new default mapping, please let me know!**
+  
+  
 * Change cache directory:
   ```
   let g:bujo#todo_file_path = $HOME . "/.cache/bujo"
