@@ -23,17 +23,15 @@ Plug 'vuciv/vim-bujo'
   ```
 * Insert a new task:
   ```
-  nmap <C-Enter> <Plug>BujoAddnormal
-  imap <C-Enter> <Plug>BujoAddinsert
+  nmap <C-S> <Plug>BujoAddnormal
+  imap <C-S> <Plug>BujoAddinsert
   ```
 * Check off a task:
   ```
-  nmap <C-BS> <Plug>BujoChecknormal
-  imap <C-BS> <Plug>BujoCheckinsert
+  nmap <C-Q> <Plug>BujoChecknormal
+  imap <C-Q> <Plug>BujoCheckinsert
   ```
-  
-  **NOTE: These are my default keys. Some terminals do not register these keys the same. For example, reddit user u/CoolioDude noted "for example, my terminal emulator sees enter, control-enter, and shift-enter as the same key." If this does not work, you will need to choose your own mappings. If anyone has suggestions for a new default mapping, please let me know!**
-  
+**Note: You can remap these keys to whatever you see fit**
   
 * Change cache directory:
   ```
