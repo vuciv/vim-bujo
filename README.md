@@ -31,6 +31,10 @@ Plug 'vuciv/vim-bujo'
   nmap <C-BS> <Plug>BujoChecknormal
   imap <C-BS> <Plug>BujoCheckinsert
   ```
+  
+  **NOTE: These are my default keys. Some terminals do not register these keys the same. If this does not work, you will need to choose your own mappings. If anyone has suggestions for a new default mapping, please let me know!**
+  
+  
 * Change cache directory:
   ```
   let g:bujo#todo_file_path = $HOME . "/.cache/bujo"
