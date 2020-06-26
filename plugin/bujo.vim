@@ -50,7 +50,7 @@ function s:OpenTodo(...)
     if empty(glob(todo_path))
       call mkdir(todo_path)
     endif
-    exe ":30vs" . todo_path_c . "/todo.md"
+    exe ":30vs" . todo_path . "/todo.md"
   endif
 endfunction
 
