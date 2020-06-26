@@ -4,7 +4,7 @@
 
 Author: Jersey Fonseca <jerseyfonseca@gmail.com>
 
-Version: 0.1
+Version: 0.2
 
 1. Overview
 2. Features
@@ -15,9 +15,13 @@ Version: 0.1
 1. Overview~
 
 This plugin allows people to easily access and
-manage a todo list.
+manage todo lists for their projects.
 
-You can stable versions of this plugin at: 
+You can access Todo lists of specific projects just
+by being inside of that git repo. In addition, you
+can access a general todo list from any folder.
+
+You can find stable versions of this plugin at: 
 
 https://github.com/jfonseca8/vim-bujo
 

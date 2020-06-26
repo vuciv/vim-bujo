@@ -1,7 +1,8 @@
 # vim-bujo
 
-This plugin allows people to easily access and manage a minimalist todo list from vim.
+This plugin allows people to easily access and manage todo lists for their projects from vim.
 
+You can easily access and manage Todo lists of specific projects or a general Todo list.
 
 ## Installation
 
@@ -17,9 +18,13 @@ Plug 'vuciv/vim-bujo'
 
 ## Use / Mappings
 
-* Run:
+* Open Todo of current git repo:
   ```
-  :Todo
+  :Todo // from git repo
+  ```
+* Open general Todo:
+  ```
+  :Todo g
   ```
 * Insert a new task:
   ```
@@ -42,7 +47,7 @@ Plug 'vuciv/vim-bujo'
 
 ## Screenshots
 
-This gif shows how the TODO list opens up in vim.
+This gif shows how the Todo list opens up in vim.
 
 ![Gif of Bujo use](https://raw.githubusercontent.com/jfonseca8/vim-bujo/master/screenshots/bujo.gif)
 
