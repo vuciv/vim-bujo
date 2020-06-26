@@ -21,13 +21,13 @@ Plug 'vuciv/vim-bujo'
 
 ## Use / Mappings
 
+* Open Todo of current git repo:
+  ```
+  :Todo // from git repo
+  ```
 * Open general Todo:
   ```
   :Todo g
-  ```
-* Open Todo of git repo:
-  ```
-  :Todo // from git repo
   ```
 * Insert a new task:
   ```
@@ -50,7 +50,7 @@ Plug 'vuciv/vim-bujo'
 
 ## Screenshots
 
-This gif shows how the TODO list opens up in vim.
+This gif shows how the Todo list opens up in vim.
 
 ![Gif of Bujo use](https://raw.githubusercontent.com/jfonseca8/vim-bujo/master/screenshots/bujo.gif)
 
