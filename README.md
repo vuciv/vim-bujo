@@ -2,10 +2,7 @@
 
 This plugin allows people to easily access and manage todo lists for their projects from vim.
 
-
-This plugin allows people to easily access and manage todo lists for their projects.
-
-You can access Todo lists of specific projects just by being inside of that git repo. In addition, you can access a general todo list from any folder.
+You can easily access and manage Todo lists of specific projects or a general Todo list.
 
 ## Installation
 
