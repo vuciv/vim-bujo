@@ -1,3 +1,7 @@
+" bujo.vim - A minimalist todo list manager
+" Maintainer:   Jersey Fonseca <http://www.jerseyfonseca.com/>
+" Version:      0.5
+
 "Make bujo directory if it doesn't exist"
 let g:bujo#todo_file_path = get(g:, "bujo#todo_file_path", $HOME . "/.cache/bujo")
 if empty(glob(g:bujo#todo_file_path))
