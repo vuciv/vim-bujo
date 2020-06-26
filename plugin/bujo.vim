@@ -30,10 +30,10 @@ endfunction
 " GetToplevelFolder() gives us a clean name of the git repository that we are
 " currently working in
 function s:GetToplevelFolder()
-    let absolute_path = system("git rev-parse --show-toplevel")
-    let repo_name = split(absolute_path, "/")
-    let repo_name_clean = split(repo_name[-1], '\v\n')[0]
-    return repo_name_clean
+  let absolute_path = system("git rev-parse --show-toplevel")
+  let repo_name = split(absolute_path, "/")
+  let repo_name_clean = split(repo_name[-1], '\v\n')[0]
+  return repo_name_clean
 endfunction
 
 " OpenTodo() opens the respective todo.md file from $HOME/.cache/bujo
@@ -46,7 +46,11 @@ function s:OpenTodo(...)
     exe ":30vs" . g:bujo#todo_file_path . "/todo.md" 
   else 
     let repo_name_clean = s:GetToplevelFolder()
-    exe ":30vs" . g:bujo#todo_file_path . "/" . repo_name_clean . "/todo.md"
+    let todo_path = g:bujo#todo_file_path . "/" . repo_name_clean 
+    if empty(glob(todo_path))
+      call mkdir(todo_path)
+    endif
+    exe ":30vs" . todo_path_c . "/todo.md"
   endif
 endfunction
 
