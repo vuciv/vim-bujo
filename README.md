@@ -32,7 +32,7 @@ Plug 'vuciv/vim-bujo'
   :botright Todo
   :botright Todo g
   ```
-__You can see more mod commands ![here](https://vimhelp.org/map.txt.html#%3Cmods%3E)__
+__You can see more mod commands at [:h mods]__
 
 * Insert a new task:
   ```
@@ -87,3 +87,4 @@ reach out to me on [twitter]
 
 [twitter]: https://twitter.com/FonsecaJersey
 [vim-plug]: https://github.com/junegunn/vim-plug
+[:h mods]: https://vimhelp.org/map.txt.html#%3Cmods%3E
