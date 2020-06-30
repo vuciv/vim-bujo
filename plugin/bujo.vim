@@ -2,8 +2,11 @@
 " Maintainer:   Jersey Fonseca <http://www.jerseyfonseca.com/>
 " Version:      0.5
 
-"Make bujo directory if it doesn't exist"
+" Get custom configs
 let g:bujo#todo_file_path = get(g:, "bujo#todo_file_path", $HOME . "/.cache/bujo")
+let g:bujo#window_width = get(g:, "bujo#window_width", 30)
+
+" Make bujo directory if it doesn't exist"
 if empty(glob(g:bujo#todo_file_path))
   call mkdir(g:bujo#todo_file_path)
 endif
@@ -36,28 +39,48 @@ function s:GetToplevelFolder()
   return repo_name_clean
 endfunction
 
-" OpenTodo() opens the respective todo.md file from $HOME/.cache/bujo
-" If we are in a git repository, we open the todo.md for that git repository.
-" Otherwise, we open the global todo file.
-function s:OpenTodo(...)
-  " If an argument was passed in, we open the general file
-  " a:0 will be false if no argument was passed in (a:0 == 0) 
-  if a:0 || !s:InGitRepository()
-    exe ":30vs" . g:bujo#todo_file_path . "/todo.md" 
-  else 
-    let repo_name_clean = s:GetToplevelFolder()
-    let todo_path = g:bujo#todo_file_path . "/" . repo_name_clean 
+
+" GetBujoFilePath() returns which file path we will be using. If we are in a
+" git repository, we return the directory for that specific git repo.
+" Otherwise, we return the general file path. 
+"
+" If we are passed an argument, it means that the user wants to open the
+" general bujo file, so we also return the general file path in that case
+function s:GetBujoFilePath(general)
+  if a:general || !s:InGitRepository()
+    return g:bujo#todo_file_path . "/todo.md"
+  else
+    let repo_name = s:GetToplevelFolder()
+    let todo_path = g:bujo#todo_file_path . "/" . repo_name 
     if empty(glob(todo_path))
       call mkdir(todo_path)
     endif
-    exe ":30vs" . todo_path . "/todo.md"
+    return todo_path . "/todo.md"
   endif
 endfunction
 
+
+" OpenTodo() opens the respective todo.md file from $HOME/.cache/bujo
+" If we are in a git repository, we open the todo.md for that git repository.
+" Otherwise, we open the global todo file.
+"
+" Paramaters : 
+" 
+"   mods - allows a user to use <mods> (see :h mods)
+" 
+"   ... - any parameter after calling :Todo will mean that the user wants
+"   us to open the general file path. We check this with a:0
+function s:OpenTodo(mods, ...)
+  let general_bool = a:0
+  let todo_path = s:GetBujoFilePath(general_bool)
+  exe a:mods . " " . g:bujo#window_width "vs" . todo_path
+endfunction
+
 if !exists(":Todo")
-  command -nargs=? Todo :call s:OpenTodo(<f-args>)
+  command -nargs=? Todo :call s:OpenTodo(<q-mods>, <f-args>)
 endif
 
+" Update date upon enter. 
 autocmd bufnewfile todo.md call append(0, '#' . split(expand('%:p:h:t'), '\v\n')[0] . " todo")  
 autocmd bufnewfile todo.md call append(1, 'Date: ')
 autocmd bufnewfile,bufread,filewritepre todo.md exe "g/Date: */s/Date: *.*/Date: " .strftime("%a %d %b %Y")
