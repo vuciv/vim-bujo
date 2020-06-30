@@ -26,6 +26,14 @@ Plug 'vuciv/vim-bujo'
   ```
   :Todo g
   ```
+  
+* Using mods:
+  ```
+  :botright Todo
+  :botright Todo g
+  ```
+__You can see more mod commands ![here](https://vimhelp.org/map.txt.html#%3Cmods%3E)__
+
 * Insert a new task:
   ```
   nmap <C-S> <Plug>BujoAddnormal
@@ -36,14 +44,16 @@ Plug 'vuciv/vim-bujo'
   nmap <C-Q> <Plug>BujoChecknormal
   imap <C-Q> <Plug>BujoCheckinsert
   ```
-**Note: You can remap these keys to whatever you see fit**
   
 * Change cache directory:
   ```
   let g:bujo#todo_file_path = $HOME . "/.cache/bujo"
   ```
 
-
+* Change todo window width:
+  ```
+  let g:bujo#window_width = 40
+  ```
 
 ## Screenshots
 
