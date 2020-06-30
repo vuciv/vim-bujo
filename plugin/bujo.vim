@@ -2,8 +2,11 @@
 " Maintainer:   Jersey Fonseca <http://www.jerseyfonseca.com/>
 " Version:      0.5
 
-"Make bujo directory if it doesn't exist"
+" Get custom configs
 let g:bujo#todo_file_path = get(g:, "bujo#todo_file_path", $HOME . "/.cache/bujo")
+let g:bujo#window_width = get(g: "bujo#window_width", 30)
+
+" Make bujo directory if it doesn't exist"
 if empty(glob(g:bujo#todo_file_path))
   call mkdir(g:bujo#todo_file_path)
 endif
@@ -43,14 +46,14 @@ function s:OpenTodo(...)
   " If an argument was passed in, we open the general file
   " a:0 will be false if no argument was passed in (a:0 == 0) 
   if a:0 || !s:InGitRepository()
-    exe ":30vs" . g:bujo#todo_file_path . "/todo.md" 
+    exe ":" . g:bujo#window_width . "vs" . g:bujo#todo_file_path . "/todo.md" 
   else 
     let repo_name_clean = s:GetToplevelFolder()
     let todo_path = g:bujo#todo_file_path . "/" . repo_name_clean 
     if empty(glob(todo_path))
       call mkdir(todo_path)
     endif
-    exe ":30vs" . todo_path . "/todo.md"
+    exe ":" . g:bujo#window_width "vs" . todo_path . "/todo.md"
   endif
 endfunction
 
@@ -58,6 +61,7 @@ if !exists(":Todo")
   command -nargs=? Todo :call s:OpenTodo(<f-args>)
 endif
 
+" Update date upon enter. 
 autocmd bufnewfile todo.md call append(0, '#' . split(expand('%:p:h:t'), '\v\n')[0] . " todo")  
 autocmd bufnewfile todo.md call append(1, 'Date: ')
 autocmd bufnewfile,bufread,filewritepre todo.md exe "g/Date: */s/Date: *.*/Date: " .strftime("%a %d %b %Y")
