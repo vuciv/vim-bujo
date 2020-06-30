@@ -77,9 +77,8 @@ I built this because I wanted the ease of vim bindings
 with the benefits of keeping a todo list on hand. It is
 very simple and minimialist. 
 
-I plan to add diary capabilities, calendar views, history,
-and all the fun little quotes and activities that make actual
-bullet journaling fun!
+I plan to add diary capabilities, and all the fun little 
+quotes and activities that make actual bullet journaling fun!
 
 If you would like to work on this project with me, please
 reach out to me on [twitter]
