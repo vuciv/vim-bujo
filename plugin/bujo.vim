@@ -82,6 +82,3 @@ endif
 
 " Update date upon enter. 
 autocmd bufnewfile todo.md call append(0, '#' . split(expand('%:p:h:t'), '\v\n')[0] . " todo")  
-autocmd bufnewfile todo.md call append(1, 'Date: ')
-autocmd bufnewfile,bufread,filewritepre todo.md exe "g/Date: */s/Date: *.*/Date: " .strftime("%a %d %b %Y")
-autocmd bufnewfile,Bufwritepre,filewritepre todo.md execute "normal Go"
