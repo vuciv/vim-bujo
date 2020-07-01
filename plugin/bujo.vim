@@ -80,5 +80,5 @@ if !exists(":Todo")
   command -nargs=? Todo :call s:OpenTodo(<q-mods>, <f-args>)
 endif
 
-" Update date upon enter. 
+" Update title upon file create. 
 autocmd bufnewfile todo.md call append(0, '#' . split(expand('%:p:h:t'), '\v\n')[0] . " todo")  
