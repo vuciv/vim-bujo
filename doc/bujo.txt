@@ -4,7 +4,7 @@
 
 Author: Jersey Fonseca <jerseyfonseca@gmail.com>
 
-Version: 0.2
+Version: 0.5
 
 1. Overview
 2. Features
