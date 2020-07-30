@@ -73,7 +73,7 @@ endfunction
 function s:OpenTodo(mods, ...)
   let general_bool = a:0
   let todo_path = s:GetBujoFilePath(general_bool)
-  exe a:mods . " " . g:bujo#window_width "vs" . todo_path
+  exe a:mods . " " . g:bujo#window_width "vs  " . todo_path
 endfunction
 
 if !exists(":Todo")
