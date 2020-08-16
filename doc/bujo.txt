@@ -1,4 +1,5 @@
-*bujo.txt*                                *bujo.txt*
+                  
+                                             *bujo.txt*
                         Bujo~
              Bullet Journal Vim Plugin~
 
@@ -45,11 +46,11 @@ very simple and minimialist.
   * Use mods
     :<mods> Todo
   * Insert a new task:
-    nmap <C-Enter> <Plug>BujoAddTodoNormal
-    imap <C-Enter> <Plug>BujoAddTodoInsert
+    nmap <C-S> <Plug>BujoAddTodoNormal
+    imap <C-S> <Plug>BujoAddTodoInsert
   * Check off a task:
-    nmap <C-BS> <Plug>BujoChecknormal
-    imap <C-BS> <Plug>BujoCheckinsert
+    nmap <C-Q> <Plug>BujoChecknormal
+    imap <C-Q> <Plug>BujoCheckinsert
   * Change cache directory:
     let g:bujo#todo_file_path = $HOME . "/.cache/bujo"
   * Change window open width:
