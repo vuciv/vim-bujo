@@ -54,6 +54,9 @@ __You can see more mod commands at [:h mods]__
   ```
   let g:bujo#window_width = 40
   ```
+  * Press ```Ctrl-W n <``` replace _n_ with the number of steps you want to move to the left
+  * Press ```Ctrl-W n >``` replace _n_ with the number of steps you want to move to the right
+
 
 ## Screenshots
 
