@@ -81,4 +81,4 @@ if !exists(":Todo")
 endif
 
 " Update title upon file create. 
-autocmd bufnewfile todo.md call append(0, '#' . split(expand('%:p:h:t'), '\v\n')[0] . " todo")  
+autocmd bufnewfile todo.md call append(0, "# " . split(expand('%:p:h:t'), '\v\n')[0] . " todo")  
