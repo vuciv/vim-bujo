@@ -8,7 +8,7 @@ let g:bujo#window_width = get(g:, "bujo#window_width", 30)
 
 " Make bujo directory if it doesn't exist"
 if empty(glob(g:bujo#todo_file_path))
-  call mkdir(g:bujo#todo_file_path)
+  call mkdir(g:bujo#todo_file_path, 'p')
 endif
 
 " InGitRepository() tells us if the directory we are currently working in
